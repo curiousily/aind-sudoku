@@ -3,7 +3,6 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
 A: The *Naked Twins* constraint reduces the search space by finding two blocks that have the same possible digits and removing those digits from any other block that is in the same unit as the twins. In comparison to other methods, the *Naked Twins* strategy cannot output solved Sudoku puzzle (unless solved beforehand) after n successive applications of it. This constraint can be used in the `reduce_puzzle()` function, before calling `eliminate()` or `only_choice()` to allow them to work on blocks with less possible digits.
 
 # Question 2 (Diagonal Sudoku)
