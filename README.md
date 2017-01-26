@@ -7,7 +7,7 @@ A: The *Naked Twins* constraint reduces the search space by finding two blocks t
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: For solving the diagonal sudoku all 3 strategies are used - elimination, only choice, and search. Search alone would not be enough since traversing the search space is often intractable (depends on the number of filled boxes). So, we use depth-first search by starting with the box with the fewest possibilities. For each possible digit we try to reduce the search space by applying `eliminate()` and `only_choice()` until a solution is found or no improvement can be made.
 
 ### Install
 

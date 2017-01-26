@@ -115,7 +115,7 @@ def eliminate(values):
 
 def only_choice(values):
     """
-    Go through all the units, and whenever there is a unit with a value that only fits in one box, assign the value to this box.
+    Go through all the units (including diagonal), and whenever there is a unit with a value that only fits in one box, assign the value to this box.
     Input: A sudoku in dictionary form.
     Output: The resulting sudoku in dictionary form.
     """
