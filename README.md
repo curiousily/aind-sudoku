@@ -11,7 +11,9 @@ This constraint can be used in the `reduce_puzzle()` function, before calling `e
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: For solving the diagonal sudoku all 3 strategies are used - elimination, only choice, and search. Search alone would not be enough since traversing the search space is often intractable (depends on the number of filled boxes). We use depth-first search by starting with the box with the fewest possibilities. For each possible digit we try to reduce the search space by applying `eliminate()` and `only_choice()` until a solution is found or no further improvement can be made.
+A: The *Diagonal Sudoku* adds one more constraint. The diagonals of the puzzle must be filled with the digits from 1 to 9. Thus, we add two more units. This constraint effectively reduces the search space even further and can be used along with the *Naked Twins*.
+
+For solving the diagonal sudoku all 3 strategies are used - elimination, only choice, and search. Search alone would not be enough since traversing the search space is often intractable (depends on the number of filled boxes). We use depth-first search by starting with the box with the fewest possibilities. For each possible digit we try to reduce the search space by applying `eliminate()` and `only_choice()` until a solution is found or no further improvement can be made.
 
 The algorithm reuses the functions provided in the lectures with minimal modifications. Newly computed diagonal units and peers are used instead of the original ones.
 
